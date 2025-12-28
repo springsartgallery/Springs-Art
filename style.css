@@ -11,24 +11,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Replace with your background image filename */
-    background: url('background.jpg') no-repeat center center/cover;
+    /* Removed background image and replaced with dark grey */
+    background: #1a1a1a; 
     background-attachment: fixed;
 }
 
 /* The Blurred Glass Box */
 .glass-container {
-    background: rgba(221, 221, 221, 0.108); /* Transparent white */
-    backdrop-filter: blur(5px); /* The "Out of Focus" effect */
+    /* Adjusted background opacity for dark mode visibility */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(15px); 
     -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px; /* Rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px; 
     padding: 40px;
     max-width: 900px;
     width: 90%;
     text-align: center;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    color: rgb(0, 0, 0);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    /* Changed text color to white for contrast */
+    color: #ffffff;
 }
 
 /* Logo Styling */
@@ -44,27 +46,28 @@ body {
 
 .intro-text p {
     margin-bottom: 40px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /* 3-Category Grid */
 .download-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.399);
+    /* Slightly darker translucent cards */
+    background: rgba(255, 255, 255, 0.08);
     padding: 25px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px); 
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* Download Buttons */
@@ -73,7 +76,7 @@ body {
     margin-top: 15px;
     padding: 10px 20px;
     background: #ffffff;
-    color: #333;
+    color: #1a1a1a; /* Dark text for light button */
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
@@ -82,13 +85,13 @@ body {
 }
 
 .btn:hover {
-    background: #f0f0f0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .download-grid {
-        grid-template-columns: 1fr; /* Stack vertically on mobile */
+        grid-template-columns: 1fr; 
     }
 }
