@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     /* Removed background image and replaced with dark grey */
-    background: #5a5a5a; 
+    background: #323232; 
     background-attachment: fixed;
 }
 
